@@ -242,24 +242,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        //Login
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            /*string var;
 
-            var = txtEmp_no.Text;
-            if (var.ElementAt(0) == M) { }*/
-            string mystring = txtEmp_no.Text; ;
-            if (!String.IsNullOrEmpty(mystring))
-            {
-                char first = mystring[0];
-                if (first != 'M')
-                {
-                    TabControl.Controls.Remove(tabEmployee);
-                }
-                TabControl.SelectedIndex = 1;
-            }
-        }
 
         //prepare to generate invoice
         private void btnInvoice_Click(object sender, EventArgs e)
@@ -311,9 +294,37 @@ namespace WindowsFormsApp1
                 MessageBox.Show(selectedProd);
             }
         }
+        //Login
+        //for the Login Screen the password is set as the reverse order of employee no. else, the user cannot enter
+        public static string Reverse(string str)
+        {
+            char[] charArray = str.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            string mystring = txtEmp_no.Text;
+            string mypassword = txtEmpPassword.Text;
+            string password = Reverse(mystring);
+            if (mypassword == password)
+            {
+
+                if (!String.IsNullOrEmpty(mystring))
+                {
+                    char first = mystring[0];
+                    if (first != 'M')
+                    {
+                        TabControl.Controls.Remove(tabEmployee);
+                    }
+                    TabControl.SelectedIndex = 1;
+                }
+            }
+            else { MessageBox.Show("Try Again!", "Password Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+
+        }
     }
-}
-        
+}       
 /*
  * 
  * https://stackoverflow.com/questions/418006/how-can-i-disable-a-tab-inside-a-tabcontrol
