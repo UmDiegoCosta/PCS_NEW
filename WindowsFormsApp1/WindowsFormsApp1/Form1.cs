@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        
+
         private void btnNewCust_Click(object sender, EventArgs e)
         {
             try
@@ -260,9 +260,62 @@ namespace WindowsFormsApp1
                 TabControl.SelectedIndex = 1;
             }
         }
+
+        //prepare to generate invoice
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            //variables to hold emp, cust and prd selected
+            string selectedEmp;
+            string selectedCust;
+            string selectedProd;
+
+            Int32 dgselectedEmp = dgEmpInvoice.GetCellCount(DataGridViewElementStates.Selected);
+            //check if it is grater than zero
+            if (dgselectedEmp > 3)
+            {
+                MessageBox.Show("Please, select only one Employee.");
+            }
+            else
+            {
+                int rowindex = dgEmpInvoice.CurrentCell.RowIndex;
+                int columnindex = dgEmpInvoice.CurrentCell.ColumnIndex;
+                selectedEmp = dgEmpInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
+                MessageBox.Show(selectedEmp);
+            }
+
+            Int32 dgselectedCust = dgCustInvoice.GetCellCount(DataGridViewElementStates.Selected);
+            //check if it is grater than zero
+            if (dgselectedCust > 3)
+            {
+                MessageBox.Show("Please, select only one Customer.");
+            }
+            else
+            {
+                int rowindex = dgCustInvoice.CurrentCell.RowIndex;
+                int columnindex = dgCustInvoice.CurrentCell.ColumnIndex;
+                selectedCust = dgCustInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
+                MessageBox.Show(selectedCust);
+            }
+
+            Int32 dgselectedProd = dgProductInvoice.GetCellCount(DataGridViewElementStates.Selected);
+            //check if it is grater than zero
+            if (dgselectedProd > 3)
+            {
+                MessageBox.Show("Please, select only one Customer.");
+            }
+            else
+            {
+                int rowindex = dgProductInvoice.CurrentCell.RowIndex;
+                int columnindex = dgProductInvoice.CurrentCell.ColumnIndex;
+                selectedProd = dgProductInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
+                MessageBox.Show(selectedProd);
+            }
+        }
     }
 }
+        
 /*
  * 
  * https://stackoverflow.com/questions/418006/how-can-i-disable-a-tab-inside-a-tabcontrol
+ * https://docs.microsoft.com/en-us/dotnet/framework/winforms/controls/selected-cells-rows-and-columns-datagridview
  * */

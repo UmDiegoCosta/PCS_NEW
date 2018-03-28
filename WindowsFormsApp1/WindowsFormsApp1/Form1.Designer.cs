@@ -177,7 +177,7 @@
             this.TabControl.Controls.Add(this.tabPackingSlip);
             this.TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl.Location = new System.Drawing.Point(4, 148);
-            this.TabControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TabControl.Margin = new System.Windows.Forms.Padding(6);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
             this.TabControl.Size = new System.Drawing.Size(1576, 888);
@@ -187,9 +187,9 @@
             // 
             this.tabLogin.Controls.Add(this.panel1);
             this.tabLogin.Location = new System.Drawing.Point(8, 56);
-            this.tabLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabLogin.Margin = new System.Windows.Forms.Padding(6);
             this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(6);
             this.tabLogin.Size = new System.Drawing.Size(1560, 824);
             this.tabLogin.TabIndex = 0;
             this.tabLogin.Text = "Login";
@@ -204,7 +204,7 @@
             this.panel1.Controls.Add(this.txtEmp_no);
             this.panel1.Controls.Add(this.lblEmp_no);
             this.panel1.Location = new System.Drawing.Point(394, 215);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(720, 419);
             this.panel1.TabIndex = 4;
@@ -212,7 +212,7 @@
             // btnLogin
             // 
             this.btnLogin.Location = new System.Drawing.Point(326, 319);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(6);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(150, 44);
             this.btnLogin.TabIndex = 6;
@@ -232,7 +232,7 @@
             // txtEmpPassword
             // 
             this.txtEmpPassword.Location = new System.Drawing.Point(244, 204);
-            this.txtEmpPassword.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpPassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpPassword.Name = "txtEmpPassword";
             this.txtEmpPassword.PasswordChar = '*';
             this.txtEmpPassword.Size = new System.Drawing.Size(354, 50);
@@ -241,7 +241,7 @@
             // txtEmp_no
             // 
             this.txtEmp_no.Location = new System.Drawing.Point(244, 114);
-            this.txtEmp_no.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmp_no.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmp_no.Name = "txtEmp_no";
             this.txtEmp_no.Size = new System.Drawing.Size(354, 50);
             this.txtEmp_no.TabIndex = 3;
@@ -265,11 +265,11 @@
             this.tabEmployee.Controls.Add(this.btnNewEmp);
             this.tabEmployee.Controls.Add(this.txtEmpSearch);
             this.tabEmployee.Controls.Add(this.panelEmp);
-            this.tabEmployee.Location = new System.Drawing.Point(8, 51);
-            this.tabEmployee.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabEmployee.Location = new System.Drawing.Point(8, 56);
+            this.tabEmployee.Margin = new System.Windows.Forms.Padding(6);
             this.tabEmployee.Name = "tabEmployee";
-            this.tabEmployee.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabEmployee.Size = new System.Drawing.Size(1560, 829);
+            this.tabEmployee.Padding = new System.Windows.Forms.Padding(6);
+            this.tabEmployee.Size = new System.Drawing.Size(1560, 824);
             this.tabEmployee.TabIndex = 5;
             this.tabEmployee.Text = "Employee";
             this.tabEmployee.UseVisualStyleBackColor = true;
@@ -293,7 +293,7 @@
             this.empNameDataGridViewTextBoxColumn});
             this.dgEmployee.DataSource = this.eMPLOYEEBindingSource;
             this.dgEmployee.Location = new System.Drawing.Point(775, 124);
-            this.dgEmployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.dgEmployee.Name = "dgEmployee";
             this.dgEmployee.RowTemplate.Height = 33;
             this.dgEmployee.Size = new System.Drawing.Size(756, 365);
@@ -324,7 +324,7 @@
             // btnSaveEmp
             // 
             this.btnSaveEmp.Location = new System.Drawing.Point(579, 528);
-            this.btnSaveEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveEmp.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveEmp.Name = "btnSaveEmp";
             this.btnSaveEmp.Size = new System.Drawing.Size(150, 75);
             this.btnSaveEmp.TabIndex = 37;
@@ -334,7 +334,7 @@
             // btnEditEmp
             // 
             this.btnEditEmp.Location = new System.Drawing.Point(299, 528);
-            this.btnEditEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditEmp.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditEmp.Name = "btnEditEmp";
             this.btnEditEmp.Size = new System.Drawing.Size(150, 75);
             this.btnEditEmp.TabIndex = 36;
@@ -344,7 +344,7 @@
             // btnNewEmp
             // 
             this.btnNewEmp.Location = new System.Drawing.Point(25, 528);
-            this.btnNewEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewEmp.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewEmp.Name = "btnNewEmp";
             this.btnNewEmp.Size = new System.Drawing.Size(150, 75);
             this.btnNewEmp.TabIndex = 35;
@@ -354,7 +354,7 @@
             // txtEmpSearch
             // 
             this.txtEmpSearch.Location = new System.Drawing.Point(965, 67);
-            this.txtEmpSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpSearch.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpSearch.Name = "txtEmpSearch";
             this.txtEmpSearch.Size = new System.Drawing.Size(564, 50);
             this.txtEmpSearch.TabIndex = 34;
@@ -374,7 +374,7 @@
             this.panelEmp.Controls.Add(this.txtEmpName);
             this.panelEmp.Controls.Add(this.txtEmpNo);
             this.panelEmp.Location = new System.Drawing.Point(25, 26);
-            this.panelEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEmp.Margin = new System.Windows.Forms.Padding(4);
             this.panelEmp.Name = "panelEmp";
             this.panelEmp.Size = new System.Drawing.Size(704, 463);
             this.panelEmp.TabIndex = 33;
@@ -387,7 +387,7 @@
             "Active ",
             "Inactive"});
             this.cnEmpStatus.Location = new System.Drawing.Point(332, 310);
-            this.cnEmpStatus.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cnEmpStatus.Margin = new System.Windows.Forms.Padding(6);
             this.cnEmpStatus.Name = "cnEmpStatus";
             this.cnEmpStatus.Size = new System.Drawing.Size(334, 50);
             this.cnEmpStatus.TabIndex = 14;
@@ -396,7 +396,7 @@
             // 
             this.txtEmpPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEEBindingSource, "EmpPassword", true));
             this.txtEmpPass.Location = new System.Drawing.Point(332, 373);
-            this.txtEmpPass.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpPass.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpPass.Name = "txtEmpPass";
             this.txtEmpPass.PasswordChar = '*';
             this.txtEmpPass.Size = new System.Drawing.Size(334, 50);
@@ -466,7 +466,7 @@
             // 
             this.txtEmpManagerNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEEBindingSource, "EmpManagerNo", true));
             this.txtEmpManagerNumber.Location = new System.Drawing.Point(332, 248);
-            this.txtEmpManagerNumber.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpManagerNumber.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpManagerNumber.Name = "txtEmpManagerNumber";
             this.txtEmpManagerNumber.Size = new System.Drawing.Size(334, 50);
             this.txtEmpManagerNumber.TabIndex = 10;
@@ -475,7 +475,7 @@
             // 
             this.txtEmpPosition.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEEBindingSource, "EmpPosition", true));
             this.txtEmpPosition.Location = new System.Drawing.Point(332, 173);
-            this.txtEmpPosition.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpPosition.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpPosition.Name = "txtEmpPosition";
             this.txtEmpPosition.Size = new System.Drawing.Size(334, 50);
             this.txtEmpPosition.TabIndex = 9;
@@ -484,7 +484,7 @@
             // 
             this.txtEmpName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEEBindingSource, "EmpName", true));
             this.txtEmpName.Location = new System.Drawing.Point(332, 108);
-            this.txtEmpName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(334, 50);
             this.txtEmpName.TabIndex = 8;
@@ -493,7 +493,7 @@
             // 
             this.txtEmpNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eMPLOYEEBindingSource, "Emp_No", true));
             this.txtEmpNo.Location = new System.Drawing.Point(332, 40);
-            this.txtEmpNo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEmpNo.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmpNo.Name = "txtEmpNo";
             this.txtEmpNo.Size = new System.Drawing.Size(334, 50);
             this.txtEmpNo.TabIndex = 7;
@@ -507,11 +507,11 @@
             this.tabCustomer.Controls.Add(this.txtCustomerSearch);
             this.tabCustomer.Controls.Add(this.label1);
             this.tabCustomer.Controls.Add(this.panelCustomer);
-            this.tabCustomer.Location = new System.Drawing.Point(8, 51);
-            this.tabCustomer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabCustomer.Location = new System.Drawing.Point(8, 56);
+            this.tabCustomer.Margin = new System.Windows.Forms.Padding(6);
             this.tabCustomer.Name = "tabCustomer";
-            this.tabCustomer.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabCustomer.Size = new System.Drawing.Size(1560, 829);
+            this.tabCustomer.Padding = new System.Windows.Forms.Padding(6);
+            this.tabCustomer.Size = new System.Drawing.Size(1560, 824);
             this.tabCustomer.TabIndex = 1;
             this.tabCustomer.Text = "Customer";
             this.tabCustomer.UseVisualStyleBackColor = true;
@@ -526,7 +526,7 @@
             this.custPhoneDataGridViewTextBoxColumn});
             this.dgCustomer.DataSource = this.cUSTOMERBindingSource;
             this.dgCustomer.Location = new System.Drawing.Point(771, 118);
-            this.dgCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.dgCustomer.Name = "dgCustomer";
             this.dgCustomer.RowTemplate.Height = 33;
             this.dgCustomer.Size = new System.Drawing.Size(756, 549);
@@ -558,7 +558,7 @@
             // btnSaveCust
             // 
             this.btnSaveCust.Location = new System.Drawing.Point(575, 694);
-            this.btnSaveCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveCust.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveCust.Name = "btnSaveCust";
             this.btnSaveCust.Size = new System.Drawing.Size(150, 75);
             this.btnSaveCust.TabIndex = 31;
@@ -568,7 +568,7 @@
             // btnEditCust
             // 
             this.btnEditCust.Location = new System.Drawing.Point(295, 694);
-            this.btnEditCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditCust.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditCust.Name = "btnEditCust";
             this.btnEditCust.Size = new System.Drawing.Size(150, 75);
             this.btnEditCust.TabIndex = 30;
@@ -578,7 +578,7 @@
             // btnNewCust
             // 
             this.btnNewCust.Location = new System.Drawing.Point(21, 694);
-            this.btnNewCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewCust.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewCust.Name = "btnNewCust";
             this.btnNewCust.Size = new System.Drawing.Size(150, 75);
             this.btnNewCust.TabIndex = 29;
@@ -588,7 +588,7 @@
             // txtCustomerSearch
             // 
             this.txtCustomerSearch.Location = new System.Drawing.Point(961, 61);
-            this.txtCustomerSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerSearch.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerSearch.Name = "txtCustomerSearch";
             this.txtCustomerSearch.Size = new System.Drawing.Size(564, 50);
             this.txtCustomerSearch.TabIndex = 28;
@@ -624,7 +624,7 @@
             this.panelCustomer.Controls.Add(this.lblCustBillStreetAddress);
             this.panelCustomer.Controls.Add(this.lblCustBillCity);
             this.panelCustomer.Location = new System.Drawing.Point(21, 20);
-            this.panelCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.panelCustomer.Name = "panelCustomer";
             this.panelCustomer.Size = new System.Drawing.Size(704, 647);
             this.panelCustomer.TabIndex = 27;
@@ -633,7 +633,7 @@
             // 
             this.txtBillPostalCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustBillPostalCode", true));
             this.txtBillPostalCode.Location = new System.Drawing.Point(332, 578);
-            this.txtBillPostalCode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBillPostalCode.Margin = new System.Windows.Forms.Padding(6);
             this.txtBillPostalCode.Name = "txtBillPostalCode";
             this.txtBillPostalCode.Size = new System.Drawing.Size(334, 50);
             this.txtBillPostalCode.TabIndex = 17;
@@ -652,7 +652,7 @@
             // 
             this.txtBillCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustBillCity", true));
             this.txtBillCity.Location = new System.Drawing.Point(332, 521);
-            this.txtBillCity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBillCity.Margin = new System.Windows.Forms.Padding(6);
             this.txtBillCity.Name = "txtBillCity";
             this.txtBillCity.Size = new System.Drawing.Size(334, 50);
             this.txtBillCity.TabIndex = 15;
@@ -661,7 +661,7 @@
             // 
             this.txtCustomerNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustNo", true));
             this.txtCustomerNo.Location = new System.Drawing.Point(332, 40);
-            this.txtCustomerNo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerNo.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerNo.Name = "txtCustomerNo";
             this.txtCustomerNo.Size = new System.Drawing.Size(334, 50);
             this.txtCustomerNo.TabIndex = 8;
@@ -670,7 +670,7 @@
             // 
             this.txtBillStreet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustBillStreetAddress", true));
             this.txtBillStreet.Location = new System.Drawing.Point(332, 448);
-            this.txtBillStreet.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBillStreet.Margin = new System.Windows.Forms.Padding(6);
             this.txtBillStreet.Name = "txtBillStreet";
             this.txtBillStreet.Size = new System.Drawing.Size(334, 50);
             this.txtBillStreet.TabIndex = 14;
@@ -689,7 +689,7 @@
             // 
             this.txtCustomerPostal.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustShipPostalCode", true));
             this.txtCustomerPostal.Location = new System.Drawing.Point(332, 373);
-            this.txtCustomerPostal.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerPostal.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerPostal.Name = "txtCustomerPostal";
             this.txtCustomerPostal.Size = new System.Drawing.Size(334, 50);
             this.txtCustomerPostal.TabIndex = 13;
@@ -708,7 +708,7 @@
             // 
             this.txtCustomerCity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustShipCity", true));
             this.txtCustomerCity.Location = new System.Drawing.Point(332, 312);
-            this.txtCustomerCity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerCity.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerCity.Name = "txtCustomerCity";
             this.txtCustomerCity.Size = new System.Drawing.Size(334, 50);
             this.txtCustomerCity.TabIndex = 12;
@@ -727,7 +727,7 @@
             // 
             this.txtCustomerStreet.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustShipStreetAddress", true));
             this.txtCustomerStreet.Location = new System.Drawing.Point(332, 248);
-            this.txtCustomerStreet.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerStreet.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerStreet.Name = "txtCustomerStreet";
             this.txtCustomerStreet.Size = new System.Drawing.Size(334, 50);
             this.txtCustomerStreet.TabIndex = 11;
@@ -746,7 +746,7 @@
             // 
             this.txtCustomerPhone.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustPhone", true));
             this.txtCustomerPhone.Location = new System.Drawing.Point(332, 173);
-            this.txtCustomerPhone.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerPhone.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerPhone.Name = "txtCustomerPhone";
             this.txtCustomerPhone.Size = new System.Drawing.Size(334, 50);
             this.txtCustomerPhone.TabIndex = 10;
@@ -765,7 +765,7 @@
             // 
             this.txtCustomerName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cUSTOMERBindingSource, "CustName", true));
             this.txtCustomerName.Location = new System.Drawing.Point(332, 108);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(334, 50);
             this.txtCustomerName.TabIndex = 9;
@@ -809,11 +809,11 @@
             this.tabProduct.Controls.Add(this.btnEditProd);
             this.tabProduct.Controls.Add(this.btnNewProd);
             this.tabProduct.Controls.Add(this.panelProd);
-            this.tabProduct.Location = new System.Drawing.Point(8, 51);
-            this.tabProduct.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabProduct.Location = new System.Drawing.Point(8, 56);
+            this.tabProduct.Margin = new System.Windows.Forms.Padding(6);
             this.tabProduct.Name = "tabProduct";
-            this.tabProduct.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabProduct.Size = new System.Drawing.Size(1560, 829);
+            this.tabProduct.Padding = new System.Windows.Forms.Padding(6);
+            this.tabProduct.Size = new System.Drawing.Size(1560, 824);
             this.tabProduct.TabIndex = 2;
             this.tabProduct.Text = "Product";
             this.tabProduct.UseVisualStyleBackColor = true;
@@ -827,7 +827,7 @@
             this.prodDescriptionDataGridViewTextBoxColumn});
             this.dgProduct.DataSource = this.pRODUCTBindingSource;
             this.dgProduct.Location = new System.Drawing.Point(775, 116);
-            this.dgProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgProduct.Margin = new System.Windows.Forms.Padding(4);
             this.dgProduct.Name = "dgProduct";
             this.dgProduct.RowTemplate.Height = 33;
             this.dgProduct.Size = new System.Drawing.Size(756, 481);
@@ -853,7 +853,7 @@
             // txtProductSearch
             // 
             this.txtProductSearch.Location = new System.Drawing.Point(967, 59);
-            this.txtProductSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProductSearch.Margin = new System.Windows.Forms.Padding(6);
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(564, 50);
             this.txtProductSearch.TabIndex = 37;
@@ -871,7 +871,7 @@
             // btnSaveProd
             // 
             this.btnSaveProd.Location = new System.Drawing.Point(575, 630);
-            this.btnSaveProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveProd.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveProd.Name = "btnSaveProd";
             this.btnSaveProd.Size = new System.Drawing.Size(150, 75);
             this.btnSaveProd.TabIndex = 35;
@@ -881,7 +881,7 @@
             // btnEditProd
             // 
             this.btnEditProd.Location = new System.Drawing.Point(295, 630);
-            this.btnEditProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditProd.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditProd.Name = "btnEditProd";
             this.btnEditProd.Size = new System.Drawing.Size(150, 75);
             this.btnEditProd.TabIndex = 34;
@@ -891,7 +891,7 @@
             // btnNewProd
             // 
             this.btnNewProd.Location = new System.Drawing.Point(23, 630);
-            this.btnNewProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNewProd.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewProd.Name = "btnNewProd";
             this.btnNewProd.Size = new System.Drawing.Size(150, 75);
             this.btnNewProd.TabIndex = 33;
@@ -917,7 +917,7 @@
             this.panelProd.Controls.Add(this.lblProdNo);
             this.panelProd.Controls.Add(this.lblProdCode);
             this.panelProd.Location = new System.Drawing.Point(23, 22);
-            this.panelProd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelProd.Margin = new System.Windows.Forms.Padding(4);
             this.panelProd.Name = "panelProd";
             this.panelProd.Size = new System.Drawing.Size(704, 575);
             this.panelProd.TabIndex = 32;
@@ -926,7 +926,7 @@
             // 
             this.txtProdNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdNo", true));
             this.txtProdNo.Location = new System.Drawing.Point(316, 37);
-            this.txtProdNo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdNo.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdNo.Name = "txtProdNo";
             this.txtProdNo.Size = new System.Drawing.Size(362, 50);
             this.txtProdNo.TabIndex = 10;
@@ -935,7 +935,7 @@
             // 
             this.txtProdDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdDescription", true));
             this.txtProdDescription.Location = new System.Drawing.Point(316, 146);
-            this.txtProdDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdDescription.Name = "txtProdDescription";
             this.txtProdDescription.Size = new System.Drawing.Size(362, 50);
             this.txtProdDescription.TabIndex = 12;
@@ -958,7 +958,7 @@
             "Active",
             "Inactive"});
             this.cbProdStatus.Location = new System.Drawing.Point(316, 419);
-            this.cbProdStatus.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbProdStatus.Margin = new System.Windows.Forms.Padding(6);
             this.cbProdStatus.Name = "cbProdStatus";
             this.cbProdStatus.Size = new System.Drawing.Size(362, 50);
             this.cbProdStatus.TabIndex = 18;
@@ -977,7 +977,7 @@
             // 
             this.txtProdCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdCode", true));
             this.txtProdCode.Location = new System.Drawing.Point(316, 92);
-            this.txtProdCode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdCode.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdCode.Name = "txtProdCode";
             this.txtProdCode.Size = new System.Drawing.Size(362, 50);
             this.txtProdCode.TabIndex = 13;
@@ -996,7 +996,7 @@
             // 
             this.txtProdReorderPoint.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdReorderPoint", true));
             this.txtProdReorderPoint.Location = new System.Drawing.Point(316, 367);
-            this.txtProdReorderPoint.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdReorderPoint.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdReorderPoint.Name = "txtProdReorderPoint";
             this.txtProdReorderPoint.Size = new System.Drawing.Size(362, 50);
             this.txtProdReorderPoint.TabIndex = 17;
@@ -1015,7 +1015,7 @@
             // 
             this.txtProdCategory.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdCategory", true));
             this.txtProdCategory.Location = new System.Drawing.Point(316, 198);
-            this.txtProdCategory.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdCategory.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdCategory.Name = "txtProdCategory";
             this.txtProdCategory.Size = new System.Drawing.Size(362, 50);
             this.txtProdCategory.TabIndex = 14;
@@ -1034,7 +1034,7 @@
             // 
             this.txtProdQuantity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdQty", true));
             this.txtProdQuantity.Location = new System.Drawing.Point(316, 310);
-            this.txtProdQuantity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdQuantity.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdQuantity.Name = "txtProdQuantity";
             this.txtProdQuantity.Size = new System.Drawing.Size(362, 50);
             this.txtProdQuantity.TabIndex = 16;
@@ -1043,7 +1043,7 @@
             // 
             this.txtProdPrice.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pRODUCTBindingSource, "ProdPrice", true));
             this.txtProdPrice.Location = new System.Drawing.Point(316, 250);
-            this.txtProdPrice.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtProdPrice.Margin = new System.Windows.Forms.Padding(6);
             this.txtProdPrice.Name = "txtProdPrice";
             this.txtProdPrice.Size = new System.Drawing.Size(362, 50);
             this.txtProdPrice.TabIndex = 15;
@@ -1090,11 +1090,11 @@
             this.tabOrder.Controls.Add(this.label3);
             this.tabOrder.Controls.Add(this.dgEmpInvoice);
             this.tabOrder.Controls.Add(this.txtInvoiceEmp);
-            this.tabOrder.Location = new System.Drawing.Point(8, 51);
-            this.tabOrder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabOrder.Location = new System.Drawing.Point(8, 56);
+            this.tabOrder.Margin = new System.Windows.Forms.Padding(6);
             this.tabOrder.Name = "tabOrder";
-            this.tabOrder.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabOrder.Size = new System.Drawing.Size(1560, 829);
+            this.tabOrder.Padding = new System.Windows.Forms.Padding(6);
+            this.tabOrder.Size = new System.Drawing.Size(1560, 824);
             this.tabOrder.TabIndex = 3;
             this.tabOrder.Text = "Order";
             this.tabOrder.UseVisualStyleBackColor = true;
@@ -1102,12 +1102,13 @@
             // btnInvoice
             // 
             this.btnInvoice.Location = new System.Drawing.Point(1291, 550);
-            this.btnInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.btnInvoice.Name = "btnInvoice";
             this.btnInvoice.Size = new System.Drawing.Size(150, 75);
             this.btnInvoice.TabIndex = 52;
             this.btnInvoice.Text = "Generate Invoice";
             this.btnInvoice.UseVisualStyleBackColor = true;
+            this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
             // 
             // dgProductInvoice
             // 
@@ -1119,7 +1120,7 @@
             this.ProdPrice});
             this.dgProductInvoice.DataSource = this.pRODUCTBindingSource;
             this.dgProductInvoice.Location = new System.Drawing.Point(27, 396);
-            this.dgProductInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgProductInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.dgProductInvoice.Name = "dgProductInvoice";
             this.dgProductInvoice.RowTemplate.Height = 33;
             this.dgProductInvoice.Size = new System.Drawing.Size(610, 229);
@@ -1146,7 +1147,7 @@
             // txtInvoiceProd
             // 
             this.txtInvoiceProd.Location = new System.Drawing.Point(219, 336);
-            this.txtInvoiceProd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtInvoiceProd.Margin = new System.Windows.Forms.Padding(6);
             this.txtInvoiceProd.Name = "txtInvoiceProd";
             this.txtInvoiceProd.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceProd.TabIndex = 50;
@@ -1171,7 +1172,7 @@
             this.custPhoneDataGridViewTextBoxColumn1});
             this.dgCustInvoice.DataSource = this.cUSTOMERBindingSource;
             this.dgCustInvoice.Location = new System.Drawing.Point(831, 84);
-            this.dgCustInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgCustInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.dgCustInvoice.Name = "dgCustInvoice";
             this.dgCustInvoice.RowTemplate.Height = 33;
             this.dgCustInvoice.Size = new System.Drawing.Size(610, 192);
@@ -1198,7 +1199,7 @@
             // txtInvoiceCust
             // 
             this.txtInvoiceCust.Location = new System.Drawing.Point(1023, 27);
-            this.txtInvoiceCust.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtInvoiceCust.Margin = new System.Windows.Forms.Padding(6);
             this.txtInvoiceCust.Name = "txtInvoiceCust";
             this.txtInvoiceCust.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceCust.TabIndex = 47;
@@ -1233,7 +1234,7 @@
             this.empPositionDataGridViewTextBoxColumn});
             this.dgEmpInvoice.DataSource = this.eMPLOYEEBindingSource;
             this.dgEmpInvoice.Location = new System.Drawing.Point(27, 84);
-            this.dgEmpInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgEmpInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.dgEmpInvoice.Name = "dgEmpInvoice";
             this.dgEmpInvoice.RowTemplate.Height = 33;
             this.dgEmpInvoice.Size = new System.Drawing.Size(610, 192);
@@ -1260,18 +1261,18 @@
             // txtInvoiceEmp
             // 
             this.txtInvoiceEmp.Location = new System.Drawing.Point(219, 27);
-            this.txtInvoiceEmp.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtInvoiceEmp.Margin = new System.Windows.Forms.Padding(6);
             this.txtInvoiceEmp.Name = "txtInvoiceEmp";
             this.txtInvoiceEmp.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceEmp.TabIndex = 43;
             // 
             // tabPackingSlip
             // 
-            this.tabPackingSlip.Location = new System.Drawing.Point(8, 51);
-            this.tabPackingSlip.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabPackingSlip.Location = new System.Drawing.Point(8, 56);
+            this.tabPackingSlip.Margin = new System.Windows.Forms.Padding(6);
             this.tabPackingSlip.Name = "tabPackingSlip";
-            this.tabPackingSlip.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.tabPackingSlip.Size = new System.Drawing.Size(1560, 829);
+            this.tabPackingSlip.Padding = new System.Windows.Forms.Padding(6);
+            this.tabPackingSlip.Size = new System.Drawing.Size(1560, 824);
             this.tabPackingSlip.TabIndex = 4;
             this.tabPackingSlip.Text = "Packing Slip";
             this.tabPackingSlip.UseVisualStyleBackColor = true;
@@ -1280,7 +1281,7 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Capture1;
             this.pictureBox1.Location = new System.Drawing.Point(1342, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(230, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1318,7 +1319,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
