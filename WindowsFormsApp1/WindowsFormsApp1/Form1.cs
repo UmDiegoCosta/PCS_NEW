@@ -16,7 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        
+
+        //[System.ComponentModel.Browsable(false)]
+        //public System.Windows.Forms.AutoScaleMode AutoScaleMode { get; set; }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -257,8 +260,6 @@ namespace WindowsFormsApp1
                 TabControl.SelectedIndex = 1;
             }
         }
-
-
     }
 }
 /*
