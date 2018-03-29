@@ -58,7 +58,11 @@ namespace WindowsFormsApp1
                 int rowindex = dgEmpInvoice.CurrentCell.RowIndex;
                 int columnindex = dgEmpInvoice.CurrentCell.ColumnIndex;
                 selectedEmp = dgEmpInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
-                MessageBox.Show(selectedEmp);
+
+                //query to hold employee info
+                var empQuery = from obj in this.pCsDataSet.EMPLOYEE
+                               where obj.Emp_No.Equals(selectedEmp)
+                               select obj.EmpName;
             }
 
             Int32 dgselectedCust = dgCustInvoice.GetCellCount(DataGridViewElementStates.Selected);
@@ -72,7 +76,11 @@ namespace WindowsFormsApp1
                 int rowindex = dgCustInvoice.CurrentCell.RowIndex;
                 int columnindex = dgCustInvoice.CurrentCell.ColumnIndex;
                 selectedCust = dgCustInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
-                MessageBox.Show(selectedCust);
+
+                //query to hold customer info
+                var custQuery = from obj in this.pCsDataSet.CUSTOMER
+                               where obj.CustNo.Equals(selectedCust)
+                               select obj;
             }
 
             Int32 dgselectedProd = dgProductInvoice.GetCellCount(DataGridViewElementStates.Selected);
@@ -86,7 +94,11 @@ namespace WindowsFormsApp1
                 int rowindex = dgProductInvoice.CurrentCell.RowIndex;
                 int columnindex = dgProductInvoice.CurrentCell.ColumnIndex;
                 selectedProd = dgProductInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
-                MessageBox.Show(selectedProd);
+
+                //query to hold product info
+                var prodQuery = from obj in this.pCsDataSet.PRODUCT
+                                where obj.ProdCode.Equals(selectedProd)
+                                select obj;
             }
 
             //move to invoice tab

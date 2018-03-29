@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pCsDataSet = new WindowsFormsApp1.PCsDataSet();
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -1315,15 +1315,15 @@
             // 
             // rvInvoice
             // 
-            reportDataSource1.Name = "Cust";
-            reportDataSource1.Value = this.cUSTOMERBindingSource;
-            reportDataSource2.Name = "prod";
-            reportDataSource2.Value = this.pRODUCTBindingSource;
-            reportDataSource3.Name = "emp";
-            reportDataSource3.Value = this.eMPLOYEEBindingSource;
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource2);
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource4.Name = "Cust";
+            reportDataSource4.Value = this.cUSTOMERBindingSource;
+            reportDataSource5.Name = "prod";
+            reportDataSource5.Value = this.pRODUCTBindingSource;
+            reportDataSource6.Name = "emp";
+            reportDataSource6.Value = this.eMPLOYEEBindingSource;
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource4);
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource5);
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource6);
             this.rvInvoice.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Invoice.rdlc";
             this.rvInvoice.Location = new System.Drawing.Point(251, 135);
             this.rvInvoice.Name = "rvInvoice";
