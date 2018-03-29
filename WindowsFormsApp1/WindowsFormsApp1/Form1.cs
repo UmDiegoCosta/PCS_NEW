@@ -36,7 +36,16 @@ namespace WindowsFormsApp1
             eMPLOYEEBindingSource.DataSource = this.pCsDataSet.EMPLOYEE;
             panelEmp.Enabled = false;
 
+<<<<<<< HEAD
             this.rvInvoice.RefreshReport();
+=======
+            //
+            foreach (TabPage tab in TabControl.TabPages)
+            {
+                tab.Enabled = false;
+            }
+(TabControl.TabPages[0] as TabPage).Enabled = true;
+>>>>>>> f61303d82220ea5047dad4431c1052bb82f917b2
         }
 
         //Products
@@ -243,24 +252,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        //Login
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            /*string var;
 
-            var = txtEmp_no.Text;
-            if (var.ElementAt(0) == M) { }*/
-            string mystring = txtEmp_no.Text; ;
-            if (!String.IsNullOrEmpty(mystring))
-            {
-                char first = mystring[0];
-                if (first != 'M')
-                {
-                    TabControl.Controls.Remove(tabEmployee);
-                }
-                TabControl.SelectedIndex = 1;
-            }
-        }
 
         //prepare to generate invoice
         private void btnInvoice_Click(object sender, EventArgs e)
@@ -316,9 +308,53 @@ namespace WindowsFormsApp1
             TabControl.TabPages.Add("Invoice");
             TabControl.SelectedIndex = 5;
         }
+        //Login
+        //for the Login Screen the password is set as the reverse order of employee no. else, the user cannot enter
+        public static string Reverse(string str)
+        {
+            char[] charArray = str.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            string mystring = txtEmp_no.Text;
+            string mypassword = txtEmpPassword.Text;
+            string password = Reverse(mystring);
+            if (mypassword == password)
+            {
+
+                if (!String.IsNullOrEmpty(mystring))
+                {
+                    char first = mystring[0];
+                    if (first != 'M')
+                    {
+                        TabControl.Controls.Remove(tabEmployee);
+                    }
+                    TabControl.SelectedIndex = 1;
+                    
+                        foreach (TabPage tPage in TabControl.TabPages)
+                        {
+                            tPage.Enabled = true;
+                        }
+             (TabControl.TabPages[0] as TabPage).Enabled = false;
+                    
+                }
+            }
+            else { MessageBox.Show("Try Again!", "Password Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+
+        }
+
+        private void txtEmp_no_TextChanged(object sender, EventArgs e)
+        {
+            foreach (TabPage tPage in TabControl.TabPages)
+            {
+                tPage.Enabled = false;
+            }
+          (TabControl.TabPages[0] as TabPage).Enabled = true;
+        }
     }
-}
-        
+}       
 /*
  * 
  * https://stackoverflow.com/questions/418006/how-can-i-disable-a-tab-inside-a-tabcontrol

@@ -39,3 +39,14 @@ D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\Wind
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\PCsNEW.accdb
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\300265733\Documents\GitHub\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
