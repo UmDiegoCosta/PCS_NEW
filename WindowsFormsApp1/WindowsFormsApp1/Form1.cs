@@ -35,17 +35,19 @@ namespace WindowsFormsApp1
             this.eMPLOYEETableAdapter.Fill(this.pCsDataSet.EMPLOYEE);
             eMPLOYEEBindingSource.DataSource = this.pCsDataSet.EMPLOYEE;
             panelEmp.Enabled = false;
-
-<<<<<<< HEAD
+            
             this.rvInvoice.RefreshReport();
-=======
-            //
             foreach (TabPage tab in TabControl.TabPages)
             {
                 tab.Enabled = false;
             }
-(TabControl.TabPages[0] as TabPage).Enabled = true;
->>>>>>> f61303d82220ea5047dad4431c1052bb82f917b2
+            (TabControl.TabPages[0] as TabPage).Enabled = true;
+
+
+            //invoice
+            List<Invoice> _list;
+
+
         }
 
         //Products
@@ -305,9 +307,9 @@ namespace WindowsFormsApp1
             }
 
             //move to invoice tab
-            TabControl.TabPages.Add("Invoice");
             TabControl.SelectedIndex = 5;
         }
+
         //Login
         //for the Login Screen the password is set as the reverse order of employee no. else, the user cannot enter
         public static string Reverse(string str)
@@ -333,11 +335,11 @@ namespace WindowsFormsApp1
                     }
                     TabControl.SelectedIndex = 1;
                     
-                        foreach (TabPage tPage in TabControl.TabPages)
-                        {
-                            tPage.Enabled = true;
-                        }
-             (TabControl.TabPages[0] as TabPage).Enabled = false;
+                    foreach (TabPage tPage in TabControl.TabPages)
+                    {
+                        tPage.Enabled = true;
+                    }
+                    (TabControl.TabPages[0] as TabPage).Enabled = false;
                     
                 }
             }
