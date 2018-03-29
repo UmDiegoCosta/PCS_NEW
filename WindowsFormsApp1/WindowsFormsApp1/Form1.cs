@@ -17,10 +17,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        //[System.ComponentModel.Browsable(false)]
-        //public System.Windows.Forms.AutoScaleMode AutoScaleMode { get; set; }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'pCsDataSet.PRODUCT' table. You can move, or remove it, as needed.
@@ -36,16 +32,11 @@ namespace WindowsFormsApp1
             eMPLOYEEBindingSource.DataSource = this.pCsDataSet.EMPLOYEE;
             panelEmp.Enabled = false;
             
-            this.rvInvoice.RefreshReport();
             foreach (TabPage tab in TabControl.TabPages)
             {
                 tab.Enabled = false;
             }
             (TabControl.TabPages[0] as TabPage).Enabled = true;
-
-
-            //invoice
-            List<Invoice> _list;
 
 
         }
@@ -347,14 +338,71 @@ namespace WindowsFormsApp1
 
         }
 
-        private void txtEmp_no_TextChanged(object sender, EventArgs e)
+        //Order tab
+        private void txtInvoiceEmp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtInvoiceEmp.Text))
+                {
+                    dgEmpInvoice.DataSource = eMPLOYEEBindingSource;
+                }
+                else
+                {
+                    var query = from obj in this.pCsDataSet.EMPLOYEE
+                                where obj.EmpName.ToLower().Contains(txtInvoiceEmp.Text.ToLower()) || obj.EmpPosition.ToLower().Contains(txtInvoiceEmp.Text.ToLower())
+                                select obj;
+                    dgEmpInvoice.DataSource = query.ToList();
+
+                }
+            }
+        }
+
+        private void txtInvoiceCust_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtInvoiceCust.Text))
+                {
+                    dgCustInvoice.DataSource = cUSTOMERBindingSource;
+                }
+                else
+                {
+                    var query = from obj in this.pCsDataSet.CUSTOMER
+                                where obj.CustName.ToLower().Contains(txtInvoiceCust.Text.ToLower()) || obj.CustPhone.Contains(txtInvoiceCust.Text)
+                                select obj;
+                    dgCustInvoice.DataSource = query.ToList();
+                }
+            }
+        }
+
+        private void txtInvoiceProd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtInvoiceProd.Text))
+                {
+                    dgProductInvoice.DataSource = pRODUCTBindingSource;
+                }
+                else
+                {
+                    var query = from obj in this.pCsDataSet.PRODUCT
+                                where obj.ProdCode.ToLower().Contains(txtInvoiceProd.Text.ToLower()) || obj.ProdDescription.ToLower().Contains(txtInvoiceProd.Text.ToLower())
+                                select obj;
+                    dgProductInvoice.DataSource = query.ToList();
+
+                }
+            }
+        }
+
+        /*private void txtEmp_no_TextChanged(object sender, EventArgs e)
         {
             foreach (TabPage tPage in TabControl.TabPages)
             {
                 tPage.Enabled = false;
             }
           (TabControl.TabPages[0] as TabPage).Enabled = true;
-        }
+        }*/
     }
 }       
 /*

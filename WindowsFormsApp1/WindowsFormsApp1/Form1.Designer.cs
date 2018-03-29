@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pCsDataSet = new WindowsFormsApp1.PCsDataSet();
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,6 +47,8 @@
             this.tabEmployee = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.dgEmployee = new System.Windows.Forms.DataGridView();
+            this.empNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSaveEmp = new System.Windows.Forms.Button();
             this.btnEditEmp = new System.Windows.Forms.Button();
             this.btnNewEmp = new System.Windows.Forms.Button();
@@ -148,8 +150,6 @@
             this.eMPLOYEETableAdapter = new WindowsFormsApp1.PCsDataSetTableAdapters.EMPLOYEETableAdapter();
             this.cUSTOMERTableAdapter = new WindowsFormsApp1.PCsDataSetTableAdapters.CUSTOMERTableAdapter();
             this.pRODUCTTableAdapter = new WindowsFormsApp1.PCsDataSetTableAdapters.PRODUCTTableAdapter();
-            this.empNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.cUSTOMERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCsDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
@@ -273,7 +273,6 @@
             this.txtEmp_no.Name = "txtEmp_no";
             this.txtEmp_no.Size = new System.Drawing.Size(354, 50);
             this.txtEmp_no.TabIndex = 3;
-            this.txtEmp_no.TextChanged += new System.EventHandler(this.txtEmp_no_TextChanged);
             // 
             // lblEmp_no
             // 
@@ -327,6 +326,19 @@
             this.dgEmployee.RowTemplate.Height = 33;
             this.dgEmployee.Size = new System.Drawing.Size(756, 365);
             this.dgEmployee.TabIndex = 38;
+            // 
+            // empNoDataGridViewTextBoxColumn
+            // 
+            this.empNoDataGridViewTextBoxColumn.DataPropertyName = "Emp_No";
+            this.empNoDataGridViewTextBoxColumn.HeaderText = "Emp_No";
+            this.empNoDataGridViewTextBoxColumn.Name = "empNoDataGridViewTextBoxColumn";
+            // 
+            // empNameDataGridViewTextBoxColumn
+            // 
+            this.empNameDataGridViewTextBoxColumn.DataPropertyName = "EmpName";
+            this.empNameDataGridViewTextBoxColumn.HeaderText = "EmpName";
+            this.empNameDataGridViewTextBoxColumn.Name = "empNameDataGridViewTextBoxColumn";
+            this.empNameDataGridViewTextBoxColumn.Width = 578;
             // 
             // btnSaveEmp
             // 
@@ -1152,6 +1164,7 @@
             this.txtInvoiceProd.Name = "txtInvoiceProd";
             this.txtInvoiceProd.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceProd.TabIndex = 50;
+            this.txtInvoiceProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInvoiceProd_KeyPress);
             // 
             // label5
             // 
@@ -1206,6 +1219,7 @@
             this.txtInvoiceCust.Name = "txtInvoiceCust";
             this.txtInvoiceCust.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceCust.TabIndex = 47;
+            this.txtInvoiceCust.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInvoiceCust_KeyPress);
             // 
             // label4
             // 
@@ -1270,6 +1284,7 @@
             this.txtInvoiceEmp.Name = "txtInvoiceEmp";
             this.txtInvoiceEmp.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceEmp.TabIndex = 43;
+            this.txtInvoiceEmp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInvoiceEmp_KeyPress);
             // 
             // tabInvoice
             // 
@@ -1285,15 +1300,15 @@
             // 
             // rvInvoice
             // 
-            reportDataSource1.Name = "Cust";
-            reportDataSource1.Value = this.cUSTOMERBindingSource;
-            reportDataSource2.Name = "prod";
-            reportDataSource2.Value = this.pRODUCTBindingSource;
-            reportDataSource3.Name = "emp";
-            reportDataSource3.Value = this.eMPLOYEEBindingSource;
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource2);
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource3);
+            reportDataSource7.Name = "Cust";
+            reportDataSource7.Value = this.cUSTOMERBindingSource;
+            reportDataSource8.Name = "prod";
+            reportDataSource8.Value = this.pRODUCTBindingSource;
+            reportDataSource9.Name = "emp";
+            reportDataSource9.Value = this.eMPLOYEEBindingSource;
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource7);
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource8);
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource9);
             this.rvInvoice.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Invoice.rdlc";
             this.rvInvoice.Location = new System.Drawing.Point(251, 135);
             this.rvInvoice.Name = "rvInvoice";
@@ -1353,19 +1368,6 @@
             // pRODUCTTableAdapter
             // 
             this.pRODUCTTableAdapter.ClearBeforeFill = true;
-            // 
-            // empNoDataGridViewTextBoxColumn
-            // 
-            this.empNoDataGridViewTextBoxColumn.DataPropertyName = "Emp_No";
-            this.empNoDataGridViewTextBoxColumn.HeaderText = "Emp_No";
-            this.empNoDataGridViewTextBoxColumn.Name = "empNoDataGridViewTextBoxColumn";
-            // 
-            // empNameDataGridViewTextBoxColumn
-            // 
-            this.empNameDataGridViewTextBoxColumn.DataPropertyName = "EmpName";
-            this.empNameDataGridViewTextBoxColumn.HeaderText = "EmpName";
-            this.empNameDataGridViewTextBoxColumn.Name = "empNameDataGridViewTextBoxColumn";
-            this.empNameDataGridViewTextBoxColumn.Width = 578;
             // 
             // Form1
             // 
