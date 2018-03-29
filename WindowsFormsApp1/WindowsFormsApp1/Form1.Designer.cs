@@ -138,12 +138,15 @@
             this.empNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.empPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtInvoiceEmp = new System.Windows.Forms.TextBox();
-            this.tabPackingSlip = new System.Windows.Forms.TabPage();
+            this.tabInvoice = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFoot = new System.Windows.Forms.Label();
             this.eMPLOYEETableAdapter = new WindowsFormsApp1.PCsDataSetTableAdapters.EMPLOYEETableAdapter();
             this.cUSTOMERTableAdapter = new WindowsFormsApp1.PCsDataSetTableAdapters.CUSTOMERTableAdapter();
             this.pRODUCTTableAdapter = new WindowsFormsApp1.PCsDataSetTableAdapters.PRODUCTTableAdapter();
+            this.rvInvoice = new Microsoft.Reporting.WinForms.ReportViewer();
             this.TabControl.SuspendLayout();
             this.tabLogin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -164,6 +167,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgProductInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpInvoice)).BeginInit();
+            this.tabInvoice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -174,7 +178,7 @@
             this.TabControl.Controls.Add(this.tabCustomer);
             this.TabControl.Controls.Add(this.tabProduct);
             this.TabControl.Controls.Add(this.tabOrder);
-            this.TabControl.Controls.Add(this.tabPackingSlip);
+            this.TabControl.Controls.Add(this.tabInvoice);
             this.TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TabControl.Location = new System.Drawing.Point(4, 148);
             this.TabControl.Margin = new System.Windows.Forms.Padding(6);
@@ -1266,16 +1270,37 @@
             this.txtInvoiceEmp.Size = new System.Drawing.Size(420, 50);
             this.txtInvoiceEmp.TabIndex = 43;
             // 
-            // tabPackingSlip
+            // tabInvoice
             // 
-            this.tabPackingSlip.Location = new System.Drawing.Point(8, 56);
-            this.tabPackingSlip.Margin = new System.Windows.Forms.Padding(6);
-            this.tabPackingSlip.Name = "tabPackingSlip";
-            this.tabPackingSlip.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPackingSlip.Size = new System.Drawing.Size(1560, 824);
-            this.tabPackingSlip.TabIndex = 4;
-            this.tabPackingSlip.Text = "Packing Slip";
-            this.tabPackingSlip.UseVisualStyleBackColor = true;
+            this.tabInvoice.Controls.Add(this.rvInvoice);
+            this.tabInvoice.Controls.Add(this.button1);
+            this.tabInvoice.Controls.Add(this.button2);
+            this.tabInvoice.Location = new System.Drawing.Point(8, 56);
+            this.tabInvoice.Name = "tabInvoice";
+            this.tabInvoice.Size = new System.Drawing.Size(1560, 824);
+            this.tabInvoice.TabIndex = 6;
+            this.tabInvoice.Text = "Invoice";
+            this.tabInvoice.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1275, 24);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(259, 75);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Print Invoice";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(25, 24);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(226, 75);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "New Order";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -1309,6 +1334,14 @@
             // pRODUCTTableAdapter
             // 
             this.pRODUCTTableAdapter.ClearBeforeFill = true;
+            // 
+            // rvInvoice
+            // 
+            this.rvInvoice.Location = new System.Drawing.Point(251, 135);
+            this.rvInvoice.Name = "rvInvoice";
+            this.rvInvoice.ServerReport.BearerToken = null;
+            this.rvInvoice.Size = new System.Drawing.Size(1026, 597);
+            this.rvInvoice.TabIndex = 37;
             // 
             // Form1
             // 
@@ -1353,6 +1386,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgProductInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCustInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEmpInvoice)).EndInit();
+            this.tabInvoice.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1366,7 +1400,6 @@
         private System.Windows.Forms.TabPage tabCustomer;
         private System.Windows.Forms.TabPage tabProduct;
         private System.Windows.Forms.TabPage tabOrder;
-        private System.Windows.Forms.TabPage tabPackingSlip;
         private System.Windows.Forms.TabPage tabEmployee;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblEmp_no;
@@ -1476,6 +1509,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prodCodeDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn prodDescriptionDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProdPrice;
+        private System.Windows.Forms.TabPage tabInvoice;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private Microsoft.Reporting.WinForms.ReportViewer rvInvoice;
     }
 }
 

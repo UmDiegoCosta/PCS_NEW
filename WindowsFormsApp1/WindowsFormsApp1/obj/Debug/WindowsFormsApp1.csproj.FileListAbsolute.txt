@@ -33,7 +33,6 @@ D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\Wind
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
-D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 D:\umdie\Documents\Douglas\Software Engeneering\Project\PCS-NEW-Ver\PCS_NEW\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache

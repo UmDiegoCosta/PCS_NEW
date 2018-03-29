@@ -36,6 +36,7 @@ namespace WindowsFormsApp1
             eMPLOYEEBindingSource.DataSource = this.pCsDataSet.EMPLOYEE;
             panelEmp.Enabled = false;
 
+            this.rvInvoice.RefreshReport();
         }
 
         //Products
@@ -310,6 +311,10 @@ namespace WindowsFormsApp1
                 selectedProd = dgProductInvoice.Rows[rowindex].Cells[columnindex].Value.ToString();
                 MessageBox.Show(selectedProd);
             }
+
+            //move to invoice tab
+            TabControl.TabPages.Add("Invoice");
+            TabControl.SelectedIndex = 5;
         }
     }
 }
