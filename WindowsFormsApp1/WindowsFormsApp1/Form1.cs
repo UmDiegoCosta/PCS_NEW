@@ -36,6 +36,12 @@ namespace WindowsFormsApp1
             eMPLOYEEBindingSource.DataSource = this.pCsDataSet.EMPLOYEE;
             panelEmp.Enabled = false;
 
+            //
+            foreach (TabPage tab in TabControl.TabPages)
+            {
+                tab.Enabled = false;
+            }
+(TabControl.TabPages[0] as TabPage).Enabled = true;
         }
 
         //Products
@@ -318,10 +324,26 @@ namespace WindowsFormsApp1
                         TabControl.Controls.Remove(tabEmployee);
                     }
                     TabControl.SelectedIndex = 1;
+                    
+                        foreach (TabPage tPage in TabControl.TabPages)
+                        {
+                            tPage.Enabled = true;
+                        }
+             (TabControl.TabPages[0] as TabPage).Enabled = false;
+                    
                 }
             }
             else { MessageBox.Show("Try Again!", "Password Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
 
+        }
+
+        private void txtEmp_no_TextChanged(object sender, EventArgs e)
+        {
+            foreach (TabPage tPage in TabControl.TabPages)
+            {
+                tPage.Enabled = false;
+            }
+          (TabControl.TabPages[0] as TabPage).Enabled = true;
         }
     }
 }       

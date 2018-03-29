@@ -246,6 +246,7 @@
             this.txtEmp_no.Name = "txtEmp_no";
             this.txtEmp_no.Size = new System.Drawing.Size(354, 29);
             this.txtEmp_no.TabIndex = 3;
+            this.txtEmp_no.TextChanged += new System.EventHandler(this.txtEmp_no_TextChanged);
             // 
             // lblEmp_no
             // 
