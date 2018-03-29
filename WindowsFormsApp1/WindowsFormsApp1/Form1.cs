@@ -37,215 +37,7 @@ namespace WindowsFormsApp1
                 tab.Enabled = false;
             }
             (TabControl.TabPages[0] as TabPage).Enabled = true;
-
-
         }
-
-        //Products
-        private void btnNewProd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                panelProd.Enabled = true;
-                txtProdCode.Focus();
-                this.pCsDataSet.PRODUCT.AddPRODUCTRow(this.pCsDataSet.PRODUCT.NewPRODUCTRow());
-                pRODUCTBindingSource.MoveLast();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                pRODUCTBindingSource.ResetBindings(false);
-            }
-        }
-
-        private void btnEditProd_Click(object sender, EventArgs e)
-        {
-            panelProd.Enabled = true;
-            txtProdCode.Focus();
-        }
-
-        private void btnSaveProd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                pRODUCTBindingSource.EndEdit();
-                pRODUCTTableAdapter.Update(this.pCsDataSet.PRODUCT);
-                panelProd.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                pRODUCTBindingSource.ResetBindings(false);
-            }
-        }
-
-        private void dgProduct_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                if (MessageBox.Show("Are you sure about deleting this product?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    pRODUCTBindingSource.RemoveCurrent();
-                }
-            }
-        }
-
-        private void txtProductSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                if (string.IsNullOrEmpty(txtProductSearch.Text))
-                {
-                    dgProduct.DataSource = pRODUCTBindingSource;
-                }
-                else
-                {
-                    var query = from obj in this.pCsDataSet.PRODUCT
-                                where obj.ProdCode.Contains(txtProductSearch.Text) || obj.ProdDescription.Contains(txtProductSearch.Text)
-                                select obj;
-                    dgProduct.DataSource = query.ToList();
-
-                }
-            }
-        }
-
-        //Employee
-        private void btnNewEmp_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                panelEmp.Enabled = true;
-                txtEmpNo.Focus();
-                this.pCsDataSet.EMPLOYEE.AddEMPLOYEERow(this.pCsDataSet.EMPLOYEE.NewEMPLOYEERow());
-                eMPLOYEEBindingSource.MoveLast();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                eMPLOYEEBindingSource.ResetBindings(false);
-            }
-        }
-
-        private void btnEditEmp_Click(object sender, EventArgs e)
-        {
-            panelEmp.Enabled = true;
-            txtEmpNo.Focus();
-        }
-
-        private void btnSaveEmp_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                eMPLOYEEBindingSource.EndEdit();
-                eMPLOYEETableAdapter.Update(this.pCsDataSet.EMPLOYEE);
-                panelEmp.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                eMPLOYEEBindingSource.ResetBindings(false);
-            }
-        }
-
-        private void dgEmployee_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                if (MessageBox.Show("Are you sure about deleting this employee?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    eMPLOYEEBindingSource.RemoveCurrent();
-                }
-            }
-        }
-
-        private void txtEmpSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                if (string.IsNullOrEmpty(txtEmpSearch.Text))
-                {
-                    dgEmployee.DataSource = eMPLOYEEBindingSource;
-                }
-                else
-                {
-                    var query = from obj in this.pCsDataSet.EMPLOYEE
-                                where obj.EmpName.Contains(txtEmpSearch.Text) || obj.EmpPosition.Contains(txtEmpSearch.Text)
-                                select obj;
-                    dgEmployee.DataSource = query.ToList();
-
-                }
-            }
-        }
-
-        //Customer
-        private void txtCustomerSearch_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                if (string.IsNullOrEmpty(txtCustomerSearch.Text))
-                {
-                    dgCustomer.DataSource = cUSTOMERBindingSource;
-                }
-                else
-                {
-                    var query = from obj in this.pCsDataSet.CUSTOMER
-                                where obj.CustName.Contains(txtCustomerSearch.Text) || obj.CustPhone.Contains(txtCustomerSearch.Text)
-                                select obj;
-                    dgCustomer.DataSource = query.ToList();
-
-                }
-            }
-        }
-
-        private void dgCustomer_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                if (MessageBox.Show("Are you sure about deleting this customer?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    cUSTOMERBindingSource.RemoveCurrent();
-                }
-            }
-        }
-
-        private void btnNewCust_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                panelCustomer.Enabled = true;
-                txtCustomerName.Focus();
-                this.pCsDataSet.CUSTOMER.AddCUSTOMERRow(this.pCsDataSet.CUSTOMER.NewCUSTOMERRow());
-                cUSTOMERBindingSource.MoveLast();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cUSTOMERBindingSource.ResetBindings(false);
-            }
-        }
-
-        private void btnEditCust_Click(object sender, EventArgs e)
-        {
-            panelCustomer.Enabled = true;
-            txtCustomerName.Focus();
-        }
-
-        private void btnSaveCust_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                cUSTOMERBindingSource.EndEdit();
-                cUSTOMERTableAdapter.Update(this.pCsDataSet.CUSTOMER);
-                panelCustomer.Enabled = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cUSTOMERBindingSource.ResetBindings(false);
-            }
-        }
-
-
 
         //prepare to generate invoice
         private void btnInvoice_Click(object sender, EventArgs e)
@@ -309,7 +101,7 @@ namespace WindowsFormsApp1
             Array.Reverse(charArray);
             return new string(charArray);
         }
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string mystring = txtEmp_no.Text;
             string mypassword = txtEmpPassword.Text;
@@ -325,17 +117,16 @@ namespace WindowsFormsApp1
                         TabControl.Controls.Remove(tabEmployee);
                     }
                     TabControl.SelectedIndex = 1;
-                    
+
                     foreach (TabPage tPage in TabControl.TabPages)
                     {
                         tPage.Enabled = true;
                     }
                     (TabControl.TabPages[0] as TabPage).Enabled = false;
-                    
+
                 }
             }
             else { MessageBox.Show("Try Again!", "Password Incorrect!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-
         }
 
         //Order tab
@@ -392,6 +183,210 @@ namespace WindowsFormsApp1
                     dgProductInvoice.DataSource = query.ToList();
 
                 }
+            }
+        }
+
+        //Employee
+        private void txtEmpSearch_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtEmpSearch.Text))
+                {
+                    dgEmployee.DataSource = eMPLOYEEBindingSource;
+                }
+                else
+                {
+                    var query = from obj in this.pCsDataSet.EMPLOYEE
+                                where obj.EmpName.ToLower().Contains(txtEmpSearch.Text.ToLower()) || obj.EmpPosition.ToLower().Contains(txtEmpSearch.Text.ToLower())
+                                select obj;
+                    dgEmployee.DataSource = query.ToList();
+
+                }
+            }
+        }
+
+        private void btnNewEmp_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                panelEmp.Enabled = true;
+                txtEmpNo.Focus();
+                this.pCsDataSet.EMPLOYEE.AddEMPLOYEERow(this.pCsDataSet.EMPLOYEE.NewEMPLOYEERow());
+                eMPLOYEEBindingSource.MoveLast();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                eMPLOYEEBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void btnEditEmp_Click_1(object sender, EventArgs e)
+        {
+            panelEmp.Enabled = true;
+            txtEmpNo.Focus();
+        }
+
+        private void btnSaveEmp_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                eMPLOYEEBindingSource.EndEdit();
+                eMPLOYEETableAdapter.Update(this.pCsDataSet.EMPLOYEE);
+                panelEmp.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                eMPLOYEEBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void dgEmployee_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Are you sure about deleting this employee?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    eMPLOYEEBindingSource.RemoveCurrent();
+                }
+            }
+        }
+
+        //Customer
+        private void txtCustomerSearch_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtCustomerSearch.Text))
+                {
+                    dgCustomer.DataSource = cUSTOMERBindingSource;
+                }
+                else
+                {
+                    var query = from obj in this.pCsDataSet.CUSTOMER
+                                where obj.CustName.ToLower().Contains(txtCustomerSearch.Text.ToLower()) || obj.CustPhone.Contains(txtCustomerSearch.Text)
+                                select obj;
+                    dgCustomer.DataSource = query.ToList();
+
+                }
+            }
+        }
+
+        private void btnNewCust_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                panelCustomer.Enabled = true;
+                txtCustomerName.Focus();
+                this.pCsDataSet.CUSTOMER.AddCUSTOMERRow(this.pCsDataSet.CUSTOMER.NewCUSTOMERRow());
+                cUSTOMERBindingSource.MoveLast();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cUSTOMERBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void btnEditCust_Click_1(object sender, EventArgs e)
+        {
+            panelCustomer.Enabled = true;
+            txtCustomerName.Focus();
+        }
+
+        private void btnSaveCust_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                cUSTOMERBindingSource.EndEdit();
+                cUSTOMERTableAdapter.Update(this.pCsDataSet.CUSTOMER);
+                panelCustomer.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cUSTOMERBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void dgCustomer_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Are you sure about deleting this customer?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cUSTOMERBindingSource.RemoveCurrent();
+                }
+            }
+        }
+
+        //Product
+        private void txtProductSearch_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                if (string.IsNullOrEmpty(txtProductSearch.Text))
+                {
+                    dgProduct.DataSource = pRODUCTBindingSource;
+                }
+                else
+                {
+                    var query = from obj in this.pCsDataSet.PRODUCT
+                                where obj.ProdCode.ToLower().Contains(txtProductSearch.Text.ToLower()) || obj.ProdDescription.ToLower().Contains(txtProductSearch.Text.ToLower())
+                                select obj;
+                    dgProduct.DataSource = query.ToList();
+
+                }
+            }
+        }
+
+        private void dgProduct_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Are you sure about deleting this product?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    pRODUCTBindingSource.RemoveCurrent();
+                }
+            }
+        }
+
+        private void btnNewProd_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                panelProd.Enabled = true;
+                txtProdCode.Focus();
+                this.pCsDataSet.PRODUCT.AddPRODUCTRow(this.pCsDataSet.PRODUCT.NewPRODUCTRow());
+                pRODUCTBindingSource.MoveLast();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pRODUCTBindingSource.ResetBindings(false);
+            }
+        }
+
+        private void btnEditProd_Click_1(object sender, EventArgs e)
+        {
+            panelProd.Enabled = true;
+            txtProdCode.Focus();
+        }
+
+        private void btnSaveProd_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                pRODUCTBindingSource.EndEdit();
+                pRODUCTTableAdapter.Update(this.pCsDataSet.PRODUCT);
+                panelProd.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                pRODUCTBindingSource.ResetBindings(false);
             }
         }
 

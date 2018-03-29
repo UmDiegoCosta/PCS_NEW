@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource9 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.cUSTOMERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pCsDataSet = new WindowsFormsApp1.PCsDataSet();
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -245,7 +245,7 @@
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblEmpPassword
             // 
@@ -326,6 +326,7 @@
             this.dgEmployee.RowTemplate.Height = 33;
             this.dgEmployee.Size = new System.Drawing.Size(756, 365);
             this.dgEmployee.TabIndex = 38;
+            this.dgEmployee.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgEmployee_KeyDown);
             // 
             // empNoDataGridViewTextBoxColumn
             // 
@@ -349,6 +350,7 @@
             this.btnSaveEmp.TabIndex = 37;
             this.btnSaveEmp.Text = "Save";
             this.btnSaveEmp.UseVisualStyleBackColor = true;
+            this.btnSaveEmp.Click += new System.EventHandler(this.btnSaveEmp_Click_1);
             // 
             // btnEditEmp
             // 
@@ -359,6 +361,7 @@
             this.btnEditEmp.TabIndex = 36;
             this.btnEditEmp.Text = "Edit";
             this.btnEditEmp.UseVisualStyleBackColor = true;
+            this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click_1);
             // 
             // btnNewEmp
             // 
@@ -369,6 +372,7 @@
             this.btnNewEmp.TabIndex = 35;
             this.btnNewEmp.Text = "New";
             this.btnNewEmp.UseVisualStyleBackColor = true;
+            this.btnNewEmp.Click += new System.EventHandler(this.btnNewEmp_Click_1);
             // 
             // txtEmpSearch
             // 
@@ -377,6 +381,7 @@
             this.txtEmpSearch.Name = "txtEmpSearch";
             this.txtEmpSearch.Size = new System.Drawing.Size(564, 50);
             this.txtEmpSearch.TabIndex = 34;
+            this.txtEmpSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpSearch_KeyPress_1);
             // 
             // panelEmp
             // 
@@ -550,6 +555,7 @@
             this.dgCustomer.RowTemplate.Height = 33;
             this.dgCustomer.Size = new System.Drawing.Size(756, 549);
             this.dgCustomer.TabIndex = 32;
+            this.dgCustomer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgCustomer_KeyDown_1);
             // 
             // custNoDataGridViewTextBoxColumn
             // 
@@ -580,6 +586,7 @@
             this.btnSaveCust.TabIndex = 31;
             this.btnSaveCust.Text = "Save";
             this.btnSaveCust.UseVisualStyleBackColor = true;
+            this.btnSaveCust.Click += new System.EventHandler(this.btnSaveCust_Click_1);
             // 
             // btnEditCust
             // 
@@ -590,6 +597,7 @@
             this.btnEditCust.TabIndex = 30;
             this.btnEditCust.Text = "Edit";
             this.btnEditCust.UseVisualStyleBackColor = true;
+            this.btnEditCust.Click += new System.EventHandler(this.btnEditCust_Click_1);
             // 
             // btnNewCust
             // 
@@ -600,6 +608,7 @@
             this.btnNewCust.TabIndex = 29;
             this.btnNewCust.Text = "New";
             this.btnNewCust.UseVisualStyleBackColor = true;
+            this.btnNewCust.Click += new System.EventHandler(this.btnNewCust_Click_1);
             // 
             // txtCustomerSearch
             // 
@@ -608,6 +617,7 @@
             this.txtCustomerSearch.Name = "txtCustomerSearch";
             this.txtCustomerSearch.Size = new System.Drawing.Size(564, 50);
             this.txtCustomerSearch.TabIndex = 28;
+            this.txtCustomerSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCustomerSearch_KeyPress_1);
             // 
             // label1
             // 
@@ -848,6 +858,7 @@
             this.dgProduct.RowTemplate.Height = 33;
             this.dgProduct.Size = new System.Drawing.Size(756, 481);
             this.dgProduct.TabIndex = 38;
+            this.dgProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgProduct_KeyDown_1);
             // 
             // prodCodeDataGridViewTextBoxColumn
             // 
@@ -869,6 +880,7 @@
             this.txtProductSearch.Name = "txtProductSearch";
             this.txtProductSearch.Size = new System.Drawing.Size(564, 50);
             this.txtProductSearch.TabIndex = 37;
+            this.txtProductSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductSearch_KeyPress_1);
             // 
             // label2
             // 
@@ -889,6 +901,7 @@
             this.btnSaveProd.TabIndex = 35;
             this.btnSaveProd.Text = "Save";
             this.btnSaveProd.UseVisualStyleBackColor = true;
+            this.btnSaveProd.Click += new System.EventHandler(this.btnSaveProd_Click_1);
             // 
             // btnEditProd
             // 
@@ -899,6 +912,7 @@
             this.btnEditProd.TabIndex = 34;
             this.btnEditProd.Text = "Edit";
             this.btnEditProd.UseVisualStyleBackColor = true;
+            this.btnEditProd.Click += new System.EventHandler(this.btnEditProd_Click_1);
             // 
             // btnNewProd
             // 
@@ -909,6 +923,7 @@
             this.btnNewProd.TabIndex = 33;
             this.btnNewProd.Text = "New";
             this.btnNewProd.UseVisualStyleBackColor = true;
+            this.btnNewProd.Click += new System.EventHandler(this.btnNewProd_Click_1);
             // 
             // panelProd
             // 
@@ -1300,15 +1315,15 @@
             // 
             // rvInvoice
             // 
-            reportDataSource7.Name = "Cust";
-            reportDataSource7.Value = this.cUSTOMERBindingSource;
-            reportDataSource8.Name = "prod";
-            reportDataSource8.Value = this.pRODUCTBindingSource;
-            reportDataSource9.Name = "emp";
-            reportDataSource9.Value = this.eMPLOYEEBindingSource;
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource7);
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource8);
-            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource9);
+            reportDataSource1.Name = "Cust";
+            reportDataSource1.Value = this.cUSTOMERBindingSource;
+            reportDataSource2.Name = "prod";
+            reportDataSource2.Value = this.pRODUCTBindingSource;
+            reportDataSource3.Name = "emp";
+            reportDataSource3.Value = this.eMPLOYEEBindingSource;
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource1);
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource2);
+            this.rvInvoice.LocalReport.DataSources.Add(reportDataSource3);
             this.rvInvoice.LocalReport.ReportEmbeddedResource = "WindowsFormsApp1.Invoice.rdlc";
             this.rvInvoice.Location = new System.Drawing.Point(251, 135);
             this.rvInvoice.Name = "rvInvoice";
